@@ -1,12 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 body{
-  background: #86109B;
-  font-size: 20px;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(229 231 235);
 }
 
-.logo{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.container{
+  margin: 120px auto;
+  max-width: 400px;
+  min-width: 400px;
+  width: 100%;
+  background-color:white;
+  border-radius: 5px;
+  padding: 25px;
 }
 
+.container header{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.container .input{
+  display: flex;
+  height: 45px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.container .input-text{
+  width: 85%;
+  height: 100%;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  border-radius: 3px;
+  padding-left: 15px;
+}
+
+.container .list{
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.input button{
+  width: 60px;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: #8E49E8;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+.list li{
+  list-style: none;
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+  background: rgb(243 244 246);
+  border-radius: 3px;
+  margin-bottom: 8px;
+  padding: 0 15px;
+  overflow: hidden;
+  font-size: 19px;
+}
+
+.delete-btn{
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  border: none;
+  outline: none;
+  right: -45px;
+  color: #fff;
+  background: rgb(239 68 68);
+  font-size: 18px;
+  text-align: center;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.list li:hover .delete-btn{
+  right: 0;
+}
 

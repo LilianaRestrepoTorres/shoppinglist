@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import { FaTrash, FaPlus } from "react-icons/fa";
 
 function App() {
   const [list, setList] = useState([]);
   const [newItem, setNewItem] = useState("");
 
   function addItem(listValue) {
-    console.log("this is listValue form addItem function" ,listValue);
-    console.log("this is list debugging...",list);
+    console.log("this is listValue form addItem function", listValue);
+    console.log("this is list debugging...", list);
 
     if (listValue) {
       const newItem = {
@@ -17,7 +17,7 @@ function App() {
         isDone: false,
       };
       const newList = list;
-      console.log("this is newList debugging...",newList);
+      console.log("this is newList debugging...", newList);
       newList.push(newItem);
       setList(newList);
       setNewItem("");
@@ -37,16 +37,13 @@ function App() {
   }
 
   return (
-    <div>
-      <img src={logo} alt="" width="100" height="100" className="logo" />
-      <h1 className="app-title">Shopping List</h1>
-      <div className="container">
-        Add an Item...
-        <br />
+    <div className="container">
+      <header>Shopping List</header>
+      <div className="input">
         <input
           type="text"
           className="input-text"
-          placeholder="Write it here..."
+          placeholder="Add an Item..."
           required
           // Assigning newItem state value to clear each time is added an item
           value={newItem}
@@ -57,21 +54,23 @@ function App() {
           onClick={() => addItem(newItem)}
           disabled={!newItem.length}
         >
-          Add item
+          <FaPlus />
         </button>
-        <div className="list">
-          <ul>
-            {list.map((item) => {
-              return (
-                <li key={item.id}>
-                  <input type="checkbox" name="idDone" checked={item.isDone} />
-                  {item.value}
-                  <button className="btn" onClick={()=> deleteItem(item.id)}>Delete</button>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+      </div>
+      <div className="list">
+        <ul className="items">
+          {list.map((item) => {
+            return (
+              <li key={item.id}>
+                <input type="checkbox" name="idDone" checked={item.isDone} />
+                {item.value}
+                <button className="delete-btn" onClick={() => deleteItem(item.id)}>
+                  <FaTrash />
+                </button>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );
