@@ -62,7 +62,9 @@ function App() {
           {list.map((item) => {
             return (
               <li key={item.id}>
-                <input type="checkbox" name="idDone" checked={item.isDone} />
+                <div className="check-item"> 
+                  <input type="checkbox" name="idDone" checked={item.isDone} />
+                </div>
                 {item.value}
                 <button className="delete-btn" onClick={() => deleteItem(item.id)}>
                   <FaTrash />

@@ -93,3 +93,15 @@ body{
   right: 0;
 }
 
+.list .check-item input[type=checkbox]{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  padding: .75em 1em;
+  border: 1px solid;
+  border-radius: 3px;
+  vertical-align: middle;
+  cursor: pointer;
+  visibility: hidden;
+}
+
