@@ -8,9 +8,6 @@ function App() {
   const [newItem, setNewItem] = useState("");
 
   function addItem(listValue) {
-    console.log("this is listValue form addItem function", listValue);
-    console.log("this is list debugging...", list);
-
     if (listValue) {
       const newItem = {
         id: Date.now(),
@@ -33,7 +30,6 @@ function App() {
   }
 
   function updateItem(input) {
-    console.log("this is input from updateItem funtion", input);
     setNewItem(input);
   }
 
