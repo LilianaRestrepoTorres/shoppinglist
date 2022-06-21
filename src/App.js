@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "./icon-shopping.png";
 import "./App.css";
 import { FaTrash, FaPlus } from "react-icons/fa";
 
@@ -38,7 +39,10 @@ function App() {
 
   return (
     <div className="container">
-      <header>Shopping List</header>
+      <header>
+      <img src={logo} className="App-logo" alt="logo" />
+      <h1>Shopping List</h1>
+      </header>
       <div className="input">
         <input
           type="text"

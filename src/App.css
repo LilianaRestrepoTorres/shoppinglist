@@ -13,7 +13,7 @@ body{
 
 .container{
   margin: 120px auto;
-  max-width: 400px;
+  max-width: 500px;
   min-width: 400px;
   width: 100%;
   background-color:white;
@@ -21,7 +21,12 @@ body{
   padding: 25px;
 }
 
-.container header{
+header{
+  display: flex;
+  align-items: center;
+}
+
+.container header h1{
   font-size: 30px;
   font-weight: 600;
 }
