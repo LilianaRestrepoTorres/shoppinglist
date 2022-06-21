@@ -39,5 +39,4 @@ _You can either fork or clone the repository. Let's clone the repo, and install 
    ```
 
 ## 
-The whole application was built with 💚 by:
-- ⭐ [Liliana](https://github.com/LilianaRestrepoTorres)
+⭐ The whole application was built with 💚 by [me](https://github.com/LilianaRestrepoTorres).
